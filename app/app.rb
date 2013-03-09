@@ -9,5 +9,5 @@ get '/' do
 end
 
 get '/stylesheets/app.css' do
-	sass :stylesheet
+	sass :app
 end
