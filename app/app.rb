@@ -7,7 +7,3 @@ require "sass"
 get '/' do
 	slim :index
 end
-
-get '/stylesheets/app.css' do
-	sass :app
-end
