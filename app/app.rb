@@ -8,6 +8,6 @@ get '/' do
 	slim :index
 end
 
-get 'stylesheets/app.css' do
-	sass :app
+get '/stylesheets/app.css' do
+	sass :stylesheet
 end
