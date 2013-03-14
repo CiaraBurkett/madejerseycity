@@ -7,6 +7,13 @@ get '/' do
 	slim :index
 end
 
+post '/' do
+	name = params[:project_name]
+	url = params[:project_url]
+	description = params[:description]
+	hiring = params[:hiring]
+end
+
 # connect to an in-memory database
 DB = Sequel.sqlite
 
@@ -25,12 +32,12 @@ listings = DB[:listings]
 # populate the table
 listings.insert(:name => "#{name}", :url => "#{url}", :description => "#{description}", :hiring => "#{hiring}")
 
-post '/' do
-	name = params[:project_name]
-	url = params[:project_url]
-	description = params[:description]
-	hiring = params[:hiring]
-end
+# post '/' do
+# 	name = params[:project_name]
+# 	url = params[:project_url]
+# 	description = params[:description]
+# 	hiring = params[:hiring]
+# end
 
 # class Listing
 # 	def initialize(name, url, description, hiring)
