@@ -20,5 +20,12 @@ DB.create_table :listings do
 end
 
 class App 
-	
+
+	post '/' do
+		@name = params[:project_name]
+		@url = params[:project_url]
+		@description = params[:description]
+		@hiring = params[:hiring]
+	end
+
 end
