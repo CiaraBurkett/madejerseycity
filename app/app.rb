@@ -19,13 +19,9 @@ DB.create_table :listings do
 	TrueClass :hiring
 end
 
-class App 
-
-	post '/' do
-		@name = params[:project_name]
-		@url = params[:project_url]
-		@description = params[:description]
-		@hiring = params[:hiring]
-	end
-
+post '/' do
+	@name = params[:project_name]
+	@url = params[:project_url]
+	@description = params[:description]
+	@hiring = params[:hiring]
 end
