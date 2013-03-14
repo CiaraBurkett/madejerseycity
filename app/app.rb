@@ -23,7 +23,7 @@ end
 listings = DB[:listings]
 
 # populate the table
-listings.insert(:name, :url, :description, :hiring)
+listings.insert(:name => "#{name}", :url => "#{url}", :description => "#{description}", :hiring => "#{hiring}")
 
 # post '/' do
 # 	name = params[:project_name]
