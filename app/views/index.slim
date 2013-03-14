@@ -28,3 +28,25 @@ html lang="en"
 
 						h3 Submit Your Project
 
+						form action="/" method="POST"
+							label Project Name
+							input type="text" name="project_name"
+
+							label Project URL
+							input type="text" name="project_url"
+
+							label Description
+							textarea name="description"
+
+							fieldset
+								label Hiring?
+								label
+									input type="radio" name="yes"
+									span Yes
+								label
+									input type="radio" name="no"
+									span No
+
+							button type="submit" Submit!
+
+
