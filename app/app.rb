@@ -3,6 +3,10 @@ require "sequel"
 require "sqlite3"
 require "slim"
 
+get '/' do
+	slim :index
+end
+
 DB = Sequel.sqlite
 
 DB.create_table :listings do
@@ -11,8 +15,4 @@ DB.create_table :listings do
 	String :url
 	String :description
 	TrueClass :hiring
-end
-
-get '/' do
-	slim :index
 end
