@@ -20,8 +20,18 @@ DB.create_table :listings do
 end
 
 post '/' do
-	@name = params[:project_name]
-	@url = params[:project_url]
-	@description = params[:description]
-	@hiring = params[:hiring]
+	name = params[:project_name]
+	url = params[:project_url]
+	description = params[:description]
+	hiring = params[:hiring]
 end
+
+class Listing
+	def initialize(name, url, description, hiring)
+		@name = name
+		@url = url
+		@description = description
+		@hiring = hiring
+	end
+end
+
