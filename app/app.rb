@@ -10,7 +10,7 @@ end
 # connect to an in-memory database
 DB = Sequel.sqlite
 
-# create a listings table
+create a listings table
 DB.create_table :listings do
 	primary_key :id 
 	String :name
@@ -19,12 +19,18 @@ DB.create_table :listings do
 	TrueClass :hiring
 end
 
-post '/' do
-	name = params[:project_name]
-	url = params[:project_url]
-	description = params[:description]
-	hiring = params[:hiring]
-end
+# create a dataset from the listings table
+listings = DB[:listings]
+
+# populate the table
+listings.insert(:name, :url, :description, :hiring)
+
+# post '/' do
+# 	name = params[:project_name]
+# 	url = params[:project_url]
+# 	description = params[:description]
+# 	hiring = params[:hiring]
+# end
 
 class Listing
 	def initialize(name, url, description, hiring)
@@ -33,5 +39,13 @@ class Listing
 		@description = description
 		@hiring = hiring
 	end
+
+	post '/' do
+		name = params[:project_name]
+		url = params[:project_url]
+		description = params[:description]
+		hiring = params[:hiring]
+	end
+	
 end
 
