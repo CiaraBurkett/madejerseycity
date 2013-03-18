@@ -24,11 +24,11 @@ get '/' do
 end
 
 post '/' do
-	e = entries.new
-	e.project_name = params[:project_name]
-	e.project_url = params[:project_url]
-	e.project_description = params[:project_description]
-	e.hiring = params[:hiring]
-	e.save
+	entry = entries.new
+	entry.project_name = params[:project_name]
+	entry.project_url = params[:project_url]
+	entry.project_description = params[:project_description]
+	entry.hiring = params[:hiring]
+	entry.save
 	redirect '/'
 end
