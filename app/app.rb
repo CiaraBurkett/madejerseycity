@@ -6,12 +6,12 @@ require "slim"
 # connect to an in-memory database
 DB = Sequel.sqlite
 
-# create a entries table
+# create an entries table
 DB.create_table :entries do
 	primary_key :id 
-	String :name
-	String :url
-	String :description
+	String :project_name
+	String :project_url
+	String :project_description
 	TrueClass :hiring
 end
 
