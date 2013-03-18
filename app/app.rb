@@ -19,5 +19,16 @@ end
 entries = DB[:entries]
 
 get '/' do
+	@entries = entries.all :order => :id.desc
 	slim :index
+end
+
+post '/' do
+	e = entries.new
+	e.project_name = params[:project_name]
+	e.project_url = params[:project_url]
+	e.project_description = params[:project_description]
+	e.hiring = params[:hiring]
+	e.save
+	redirect '/'
 end
