@@ -2,3 +2,16 @@
 @import "base.css";
 @import "layout.css";
 @import "skeleton.css";
+
+/*  GLOBAL  */
+/*  HEADER  */
+header {
+	background-color: #E8563C;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-bottom: 50px;
+	padding: 20px;
+}
+header h1 {
+	color: #FCFCF2;
+}
