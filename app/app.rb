@@ -22,17 +22,19 @@ class Entry < Sequel::Model
 		
 end
 
-get '/' do
-	@entries = Entry.all #:order => :id.desc
-	slim :index
-end
+class App < Sinatra::Base
+	get '/' do
+		@entries = Entry.all #:order => :id.desc
+		slim :index
+	end
 
-post '/' do
-	entry = Entry.new
-	entry.project_name = params[:project_name]
-	entry.project_url = params[:project_url]
-	entry.project_description = params[:project_description]
-	entry.hiring = params[:hiring]
-	entry.save
-	redirect '/'
+	post '/' do
+		entry = Entry.new
+		entry.project_name = params[:project_name]
+		entry.project_url = params[:project_url]
+		entry.project_description = params[:project_description]
+		entry.hiring = params[:hiring]
+		entry.save
+		redirect '/'
+	end
 end
