@@ -21,6 +21,9 @@ header h1 {
 dt {
 	margin-bottom: 8px;
 }
+dt a {
+	text-decoration: none;
+}
 dd {
 	margin-bottom: 25px;
 }
