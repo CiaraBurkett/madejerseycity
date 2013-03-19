@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem "sinatra"
 gem "sequel"
-gem "sqlite3"
+gem "sqlite3", :group => :development
 gem "slim"
-gem "pg"
-
+group :production do
+	gem "pg"
+end
