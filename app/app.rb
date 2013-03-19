@@ -2,6 +2,7 @@ require "sinatra"
 require "sequel"
 require "sqlite3"
 require "slim"
+require "pg"
 
 # connect to an in-memory database
 DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://directory.db')
@@ -23,17 +24,17 @@ class Entry < Sequel::Model
 end
 
 
-	get '/' do
-		@entries = Entry.all
-		slim :index
-	end
+get '/' do
+	@entries = Entry.all
+	slim :index
+end
 
-	post '/' do
-		entry = Entry.new
-		entry.project_name = params[:project_name]
-		entry.project_url = params[:project_url]
-		entry.project_description = params[:project_description]
-		entry.hiring = params[:hiring]
-		entry.save
-		redirect '/'
-	end
+post '/' do
+	entry = Entry.new
+	entry.project_name = params[:project_name]
+	entry.project_url = params[:project_url]
+	entry.project_description = params[:project_description]
+	entry.hiring = params[:hiring]
+	entry.save
+	redirect '/'
+end
