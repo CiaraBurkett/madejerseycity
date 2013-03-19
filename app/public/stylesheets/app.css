@@ -4,6 +4,10 @@
 @import "skeleton.css";
 
 /*  GLOBAL  */
+body {
+	background-color: #FCFCF2;
+}
+
 /*  HEADER  */
 header {
 	background-color: #E8563C;
