@@ -4,18 +4,14 @@
 @import "skeleton.css";
 
 /*  GLOBAL  */
-body {
-	background-color: #FCFCF2;
-}
+body {}
 
 /*  HEADER  */
-header {
-	background-color: #E8563C;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	margin-bottom: 50px;
-	padding: 20px;
-}
 header h1 {
-	color: #FCFCF2;
+	color: #E8563C;
+}
+
+/*  ENTRIES  */
+dd {
+	margin-bottom: 25px;
 }
