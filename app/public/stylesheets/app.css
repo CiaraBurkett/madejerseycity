@@ -4,7 +4,9 @@
 @import "skeleton.css";
 
 /*  GLOBAL  */
-body {}
+body {
+	background-color: #FAFAFA;
+}
 
 /*  HEADER  */
 header {
