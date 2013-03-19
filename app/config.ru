@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-# require 'sinatra/base'
+require 'sinatra/base'
 
 Bundler.require
 
