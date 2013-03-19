@@ -18,3 +18,8 @@ header h1 {
 dd {
 	margin-bottom: 25px;
 }
+
+/*  ASIDE  */
+aside h2, h3 {
+	color: #E8563C;
+}
