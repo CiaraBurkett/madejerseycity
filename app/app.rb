@@ -22,7 +22,7 @@ class Entry < Sequel::Model
 		
 end
 
-class App < Sinatra::Application
+
 	get '/' do
 		@entries = Entry.all
 		slim :index
@@ -37,4 +37,3 @@ class App < Sinatra::Application
 		entry.save
 		redirect '/'
 	end
-end
