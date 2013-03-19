@@ -28,3 +28,8 @@ dd {
 aside h2, h3 {
 	color: #E8563C;
 }
+
+/*  FOOTER */
+footer p {
+	font-size: 12px;
+}
