@@ -5,7 +5,7 @@ require "slim"
 require "pg"
 
 # connect to an in-memory database
-DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://directory.db')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://directory.db')
 
 # create an entries table
 DB.create_table :entries do
