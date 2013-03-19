@@ -1,7 +1,7 @@
-# require "sinatra"
-# require "sequel"
-# require "sqlite3"
-# require "slim"
+require "sinatra"
+require "sequel"
+require "sqlite3"
+require "slim"
 
 # connect to an in-memory database
 DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://directory.db')
@@ -22,7 +22,7 @@ class Entry < Sequel::Model
 		
 end
 
-class App < Sinatra::Base
+class App < Sinatra::Application
 	get '/' do
 		@entries = Entry.all
 		slim :index

@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'bundler'
-require 'sinatra/base'
+require 'sinatra'
 
 Bundler.require
 
 require './app'
-run App
+run Sinatra::Application
