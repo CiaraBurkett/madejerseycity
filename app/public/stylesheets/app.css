@@ -4,10 +4,6 @@
 @import "skeleton.css";
 
 /*  GLOBAL  */
-body {
-	background-color: #FAFAFA;
-}
-
 /*  HEADER  */
 header {
 	margin-top: 10px;
