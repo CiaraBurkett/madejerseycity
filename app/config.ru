@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './madejerseycity'
-run madejerseycity
+require './app'
+run Sinatra::Application
