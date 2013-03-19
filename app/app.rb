@@ -1,7 +1,7 @@
-require "sinatra"
-require "sequel"
-require "sqlite3"
-require "slim"
+# require "sinatra"
+# require "sequel"
+# require "sqlite3"
+# require "slim"
 
 # connect to an in-memory database
 DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://directory.db')
