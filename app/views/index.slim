@@ -21,11 +21,13 @@ html lang="en"
 				.row
 					div class="twelve columns alpha"
 						dl
-							dt: a href="http://www.entertainmentbear.com" target="_blank" Entertainment Bear
+							h4 
+								dt: a href="http://www.entertainmentbear.com" target="_blank" Entertainment Bear
 							dd Entertainment Bear is a teeny tiny web application company based in Jersey City.  We make community-focused apps to empower individuals, small businesses, and neighborhoods.
 
 							- @entries.each do |entry|
-								dt: a href="http://www.#{entry.project_url}" target="_blank" #{entry.project_name}
+								h4 
+									dt: a href="http://www.#{entry.project_url}" target="_blank" #{entry.project_name}
 								dd #{entry.project_description}
 
 					aside class="four columns omega"

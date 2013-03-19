@@ -10,6 +10,7 @@ body {
 
 /*  HEADER  */
 header {
+	margin-top: 10px;
 	margin-bottom: 25px;
 }
 header h1 {
