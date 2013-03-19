@@ -4,7 +4,7 @@ require "sqlite3"
 require "slim"
 
 # connect to an in-memory database
-DB = Sequel.connect('sqlite://directory.db')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://directory.db')
 
 # create an entries table
 DB.create_table :entries do
