@@ -24,7 +24,7 @@ end
 
 class App < Sinatra::Base
 	get '/' do
-		@entries = Entry.all #:order => :id.desc
+		@entries = Entry.all
 		slim :index
 	end
 
