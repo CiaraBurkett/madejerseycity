@@ -25,8 +25,8 @@ html lang="en"
 							dd Entertainment Bear is a teeny tiny web application company based in Jersey City.  We make community-focused apps to empower individuals, small businesses, and neighborhoods.
 
 							- @entries.each do |entry|
-								dt: a href="- entry.project_url" target="_blank" - entry.project_name
-								dd - entry.project_description
+								dt: a href="#{entry.project_url}" target="_blank" #{entry.project_name}
+								dd #{entry.project_description}
 
 					aside class="four columns omega"
 						h2 Hello!

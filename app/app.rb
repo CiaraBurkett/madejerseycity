@@ -4,7 +4,7 @@ require "sqlite3"
 require "slim"
 
 # connect to an in-memory database
-DB = Sequel.sqlite
+DB = Sequel.connect('sqlite://directory.db')
 
 # create an entries table
 DB.create_table :entries do
@@ -16,15 +16,19 @@ DB.create_table :entries do
 end
 
 # create a dataset from the entries table
-entries = DB[:entries]
+# entries = DB[:entries]
+
+class Entry < Sequel::Model
+		
+end
 
 get '/' do
-	@entries = entries.all :order => :id.desc
+	@entries = Entry.all #:order => :id.desc
 	slim :index
 end
 
 post '/' do
-	entry = entries.new
+	entry = Entry.new
 	entry.project_name = params[:project_name]
 	entry.project_url = params[:project_url]
 	entry.project_description = params[:project_description]
