@@ -17,7 +17,7 @@ DB.create_table :entries do
 end
 
 # create a dataset from the entries table
-# entries = DB[:entries]
+entries = DB[:entries]
 
 class Entry < Sequel::Model
 		
